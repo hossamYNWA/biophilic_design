@@ -1,0 +1,15 @@
+.bigbtn {
+  width: 250px;
+  height: 90px;
+  margin: 20px auto;
+  background-color: rgb(232, 243, 200);
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+}
+
+.bigbtn:hover {
+  transform: scale(0.97);
+}

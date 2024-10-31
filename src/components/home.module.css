@@ -1,0 +1,56 @@
+.container {
+  min-height: 100vh;
+  margin: auto;
+  position: relative;
+}
+
+.img_container {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+}
+
+.img_container img {
+}
+
+.logo {
+  height: 300px;
+  overflow: hidden;
+  background-color: rgba(78, 107, 43, 0.731);
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 8%;
+}
+
+.logo img {
+  width: 100%;
+  margin-top: 10px;
+  object-fit: cover;
+}
+
+.spaces {
+  height: 500px;
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.spaces h2 {
+  background-color: #272920;
+  min-height: 80px;
+  width: 400px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 15px 20px;
+  margin: 15px;
+  color: rgb(221, 253, 147);
+}
