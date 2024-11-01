@@ -1,4 +1,5 @@
 import classes from "./home.module.css";
+import {Link} from "react-router-dom";
 const Home = () => {
   return (
     <div className={classes.container}>
@@ -11,10 +12,10 @@ const Home = () => {
         <img src="https://i.ibb.co/fShGMC8/bg-1.jpg" alt="poster" />
       </div>
       <div className={classes.spaces}>
-        <h2>Spaces for Formal Working</h2>
-        <h2>Spaces for Informal Working</h2>
-        <h2>Spaces for gathering</h2>
-        <h2>Spaces for taking a break</h2>
+        <h2><Link to='/tree:formal'>Spaces for Formal Working</Link></h2>
+        <h2><Link to='/tree:informal'>Spaces for Informal Working</Link></h2>
+        <h2><Link to='/tree:gather'>Spaces for gathering</Link></h2>
+        <h2><Link to='/tree:break'>Spaces for taking a break</Link></h2>
       </div>
     </div>
   );
