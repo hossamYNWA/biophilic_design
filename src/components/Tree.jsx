@@ -1,4 +1,5 @@
 import BigButton from "./BigButton";
+import classes from "./tree.module.css";
 const DATA = [
   {
     last: false,
@@ -207,7 +208,7 @@ const Tree = () => {
       <BigButton keyName={category.name} configs={category.value} key={i} />
     );
   });
-  return <div>{bigContent}</div>;
+  return <div className={classes.container}>{bigContent}</div>;
 };
 
 export default Tree;
