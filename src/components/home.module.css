@@ -19,26 +19,22 @@
 }
 .spaces {
   min-height: 240px;
-  width: 60%;
-  right: 14%;
-  top: 80px;
+  width: 56%;
+  right: 20%;
+  top: 20px;
   position: absolute;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
-.spaces h2 a {
-  color: rgb(221, 253, 147);
+.spaces a {
+  background-color: rgb(221, 253, 147);
   text-decoration: none;
-} 
-.spaces h2 {
-  background-color: #272920;
-  min-height: 80px;
-  width: 35%;
-  font-size: 1.2rem;
-  font-weight: bold;
+  color: #272920;
+  min-height: 65px;
+  width: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,6 +42,16 @@
   cursor: pointer;
   padding: 15px 20px;
   margin: 10px;
+  transition: all ease-in-out 200ms;
+}
+
+.spaces a:hover {
+  transform: translate(-10px, 0);
+}
+
+.spaces a h2 {
+font-size: 1.3rem;
+font-weight: bold;
 }
  @media screen and (max-width: 568px) {
 

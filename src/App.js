@@ -6,7 +6,7 @@ export default function App() {
   const router = createBrowserRouter([
     { path: "/", element: <Home /> },
     {
-      path: "/tree:formal",
+      path: "/tree/:id",
       element: <Tree />,
     },
   ]);

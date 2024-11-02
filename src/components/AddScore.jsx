@@ -516,22 +516,27 @@ const data = [
   },
 ];
 // function to calculate scores
-function getOneScore(id,totalWeight) {
+function getOneScore(id, totalWeight) {
   const itemToFind = data.find((item) => item.id === id);
   const n = itemToFind.scores.length;
   const sum = itemToFind.scores.reduce((acc, score) => acc + score.score, 0);
-  const score = sum/n
-  const effect = 100*(score*itemToFind.multiplier)/totalWeight
-  return effect
+  const score = sum / n;
+  const effect = (100 * (score * itemToFind.multiplier)) / totalWeight;
+  return effect;
 }
 
 const AddScore = ({ id }) => {
-  return (
-    <div className={classes.container}>
-      <span>Add Score: </span>
-      <input type="number" min={0} max={3} />
-    </div>
-  );
+  const strategy = data.find((item) => item.id === id);
+  // const totalWeight = strategy.scores.reduce((acc, score) => acc + score.multiplier, 0);
+  const content = strategy.scores.map((score) => {
+    return (
+      <div className={classes.container}>
+        <span>{score.name}</span>
+        <NumberInputWithStatus />
+      </div>
+    );
+  });
+  return <>{content}</>;
 };
 
 export default AddScore;

@@ -21,7 +21,7 @@ const BigButton = ({ keyName, configs }) => {
   // }
   // function treeGenerator(config) {}
   return (
-    <div>
+    <div className={classes.container}>
       <button className={classes.bigbtn} onClick={clickHandler}>
         {keyName}
       </button>
