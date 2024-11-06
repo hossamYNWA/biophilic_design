@@ -1,6 +1,7 @@
 import BigButton from "./BigButton";
 import { useParams } from "react-router-dom";
 import classes from "./tree.module.css";
+import CalculateScore from "./CalculateScore";
 const DATA = [
   {
     last: false,
@@ -243,7 +244,8 @@ const Tree = () => {
     );
   });
   return <div className={classes.container}>
-    <h2>{title}</h2>{bigContent}</div>;
+    <h2>{title}</h2>{bigContent}
+    <CalculateScore /></div>;
 };
 
 export default Tree;
