@@ -1,8 +1,8 @@
 import classes from "./smallButton.module.css";
-const SmallButton = ({ name }) => {
+const SmallButton = ({ name,color }) => {
   return (
     <div>
-      <button className={classes.smlBtn}>{name}</button>
+      <button style={{backgroundColor:color, color:`${color.includes("20") ? "black" : "white"}`}} className={classes.smlBtn}>{name}</button>
     </div>
   );
 };

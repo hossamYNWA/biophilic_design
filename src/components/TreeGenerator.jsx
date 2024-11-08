@@ -4,9 +4,9 @@ import AddScore from "./AddScore";
 const TreeGenerator = ({ data }) => {
   return (
     <ul className={classes.row}>
-      {data.map(({ name, id, last, value }) => (
+      {data.map(({ name, id, last, value, color }) => (
         <li key={id}>
-          <SmallButton name={name} />
+          <SmallButton color={color} name={name} />
           {last && <AddScore id={id} />}
           {!last && value && <TreeGenerator data={value} />}
         </li>

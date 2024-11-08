@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classes from "./bigButton.module.css";
 import TreeGenerator from "./TreeGenerator";
-const BigButton = ({ keyName, configs }) => {
+const BigButton = ({ keyName, configs, color }) => {
   //state to manage tree appearance
   const [configActive, setConfig] = useState(false);
   // on click show or hide the tree
@@ -22,10 +22,10 @@ const BigButton = ({ keyName, configs }) => {
   // function treeGenerator(config) {}
   return (
     <div className={classes.container}>
-      <button className={classes.bigbtn} onClick={clickHandler}>
+      <button className={classes.bigbtn} style={{ backgroundColor: color }} onClick={clickHandler}>
         {keyName}
       </button>
-      <div>{configActive && <TreeGenerator data={configs} />}</div>
+      <div>{configActive && <TreeGenerator data={configs}/>}</div>
     </div>
   );
 };
