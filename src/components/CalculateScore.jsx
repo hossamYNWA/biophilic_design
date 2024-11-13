@@ -24,6 +24,7 @@ const CaculateScore = () => {
     );
   });
   const finalScore = attributes.reduce((acc, attr) => acc + attr.score, 0);
+  
   const resultColor =
     finalScore < 30
       ? "var(--pf-t--color--red--40)"
@@ -39,7 +40,7 @@ const CaculateScore = () => {
         Show Result
       </button>
       {showScore && (
-        <p style={{ color: resultColor }}>{finalScore.toFixed(2)}<Link to="/charts">view charts</Link></p>
+        <p style={{ color: resultColor }}>{finalScore.toFixed(2)}<Link className={classes.shartsLink} to="/charts">view charts</Link></p>
       )}
     </div>
   );

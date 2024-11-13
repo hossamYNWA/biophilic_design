@@ -3,7 +3,20 @@ import { Chart, ChartAxis, ChartGroup, ChartLine, ChartThemeColor } from '@patte
 import { getResizeObserver } from '@patternfly/react-core';
 import { VictoryZoomContainer } from 'victory-zoom-container';
 
-const MultiColorChart = () => {
+const MultiColorChart = ({attributes}) => {
+  const dataToDisplay = attributes.map(attr => {
+    let name = null
+    if(attr.name.length === 2){
+      name = attr.name[0] + '0' + attr.name[1]
+    }
+    else if(attr.name.length === 3 && !attr.name.startsWith('b')){
+      name = attr.name[0] + attr.name[1] + '0' +  attr.name[2]
+    }
+    else{
+      name = attr.name
+    }
+    return {name:'Attributes', x: name.toUpperCase(), y: attr.score}
+  })
   const containerRef = useRef(null);
   const [width, setWidth] = useState(0);
 
@@ -29,15 +42,10 @@ const MultiColorChart = () => {
           ariaDesc="Average number of pets"
           ariaTitle="Line chart example"
           containerComponent={<VictoryZoomContainer zoomDimension="x" />}
-          legendData={[
-            { name: 'Cats' },
-            { name: 'Dogs', symbol: { type: 'dash' } },
-            { name: 'Birds' },
-            { name: 'Mice' }
-          ]}
+          legendData={[]}
           legendPosition="bottom-left"
           height={275}
-          maxDomain={{ y: 10 }}
+          maxDomain={{ y: 5 }}
           minDomain={{ y: 0 }}
           name="chart3"
           padding={{
@@ -47,47 +55,13 @@ const MultiColorChart = () => {
             top: 50
           }}
           themeColor={ChartThemeColor.multiUnordered}
-          width={width}
+          width={width*1.5}
         >
-          <ChartAxis tickValues={[2, 3, 4]} />
-          <ChartAxis dependentAxis showGrid tickValues={[2, 5, 8]} />
+          <ChartAxis tickValues={[1.5, 2.5, 3.5]} />
+          <ChartAxis dependentAxis showGrid tickValues={[1, 2,3,4,5]} />
           <ChartGroup>
             <ChartLine
-              data={[
-                { name: 'Cats', x: '2015', y: 1 },
-                { name: 'Cats', x: '2016', y: 2 },
-                { name: 'Cats', x: '2017', y: 5 },
-                { name: 'Cats', x: '2018', y: 3 }
-              ]}
-            />
-            <ChartLine
-              data={[
-                { name: 'Dogs', x: '2015', y: 2 },
-                { name: 'Dogs', x: '2016', y: 1 },
-                { name: 'Dogs', x: '2017', y: 7 },
-                { name: 'Dogs', x: '2018', y: 4 }
-              ]}
-              style={{
-                data: {
-                  strokeDasharray: '3,3'
-                }
-              }}
-            />
-            <ChartLine
-              data={[
-                { name: 'Birds', x: '2015', y: 3 },
-                { name: 'Birds', x: '2016', y: 4 },
-                { name: 'Birds', x: '2017', y: 9 },
-                { name: 'Birds', x: '2018', y: 5 }
-              ]}
-            />
-            <ChartLine
-              data={[
-                { name: 'Mice', x: '2015', y: 3 },
-                { name: 'Mice', x: '2016', y: 3 },
-                { name: 'Mice', x: '2017', y: 8 },
-                { name: 'Mice', x: '2018', y: 7 }
-              ]}
+              data={dataToDisplay}
             />
           </ChartGroup>
         </Chart>
