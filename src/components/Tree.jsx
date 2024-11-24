@@ -2,6 +2,119 @@ import BigButton from "./BigButton";
 import { useParams } from "react-router-dom";
 import classes from "./tree.module.css";
 import CalculateScore from "./CalculateScore";
+import Occupational from "./Occupational";
+import { useDispatch } from "react-redux";
+import { actions as attrActions } from "./store/AttributesSlice";
+import { actions as strategiesActions } from "./store/StrategiesSlice";
+import { actions as spacesActions } from "./store/SpacesSlice";
+
+const occuData = [
+  {
+    name: "users",
+    attrbutes: [
+      {
+        id:'oc1',
+        name: "Individuals",
+        score: 0,
+      },
+      {
+        id:'oc2',
+        name: "Small Groups",
+        score: 0,
+      },
+      {
+        id:'oc3',
+        name: "Large Groups",
+        score: 0,
+      },
+    ],
+  },
+  {
+    name: "Activities",
+    attrbutes: [
+      {
+        name: "neccessary",
+        attrbutes: [
+          {
+            id:'oc4',
+            name: "working",
+            score: 0,
+          },
+          {
+            id:'oc5',
+            name: "meeting",
+            score: 0,
+          },
+          {
+            id:'oc6',
+            name: "learning",
+            score: 0,
+          },
+        ],
+      },
+      {
+        name: "optional",
+        attrbutes: [
+          {
+            id:'oc7',
+            name: "reading",
+            score: 0,
+          },
+          {
+            id:'oc8',
+            name: "relaxing",
+            score: 0,
+          },
+          {
+            id:'oc9',
+            name: "eating",
+            score: 0,
+          },
+          {
+            id:'oc10',
+            name: "sleeping",
+            score: 0,
+          },
+          {
+            id:'oc11',
+            name: "seating",
+            score: 0,
+          },
+          {
+            id:'oc12',
+            name: "Viewing",
+            score: 0,
+          }
+        ],
+      },
+      {
+        name:'social',
+        attrbutes:[
+            {
+                id:'oc13',
+                name:'talking',
+                score:0
+            },
+            {
+                id:'oc14',
+                name:'gathering',
+                score:0
+            },
+            {
+                id:'oc15',
+                name:'celebrating',
+                score:0
+            },
+            {
+                id:'oc16',
+                name:'Playing',
+                score:0
+            },
+        ]
+      }
+    ],
+  },
+];
 const DATA = [
   {
     color: "var(--pf-t--color--gray--40)",
@@ -273,25 +386,43 @@ const DATA = [
   },
 ];
 
-const titles = [
-  "Spaces for Formal Working",
-  "Spaces for Informal Working",
-  "Spaces for gathering",
-  "Spaces for taking a break",
+const titles = [{
+  name:"Spaces for Formal Working",
+  execlude:['b7','b15','b16','b17','b18','fw4','fw6','sw1','sw2','sw3','sw4','sw5','sw6']
+},
+  {
+    name:"Spaces for Informal Working",
+    execlude:['b7','b16','b17','b18','sw3','sw4','sw5','sw6']
+  }
+  , {
+    name:"Spaces for gathering",
+    execlude:['fw5','sw4','sw5']
+  },
+  {
+    name:"Spaces for taking a break",
+    execlude:['b15','b17','fw1','fw2','fw3','fw4','fw5']
+  }
 ];
 
+
 const Tree = () => {
+  const dispatch = useDispatch();
   const { id } = useParams();
   console.log(id);
-  const title = titles[parseInt(id)];
+  dispatch(spacesActions.selectSpace({index:id}))
+  const title = titles[parseInt(id)].name;
+  const execlude = titles[parseInt(id)].execlude;
   const bigContent = DATA.map((category, i) => {
     return (
-      <BigButton keyName={category.name} configs={category.value} color={category.color} key={i} />
+      <BigButton keyName={category.name} configs={category.value} execlude={execlude} color={category.color} key={i} />
     );
   });
+  dispatch(strategiesActions.resetStrategies())
+  dispatch(attrActions.resetAttributes());
   return (
     <div className={classes.container}>
       <h2>{title}</h2>
+      <Occupational data={occuData}/>
       {bigContent}
       <CalculateScore />
     </div>

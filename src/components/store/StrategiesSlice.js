@@ -13,7 +13,7 @@ const initial = [
           score: 0,
         },
         {
-          name: "Provide views of prominent landmarks, waterscapes, landscapes, geological forms, etc",
+          name: "Provide views of prominent landmarks or landscapes.",
           score: 0,
         },
       ],
@@ -22,12 +22,14 @@ const initial = [
       id: "b2",
       scores: [
         {
-          name: "Conceive a place for withdrawal from the main flow of activity or environmental conditions to make the individual feel safe or under shelter like an overhead trellis.",
+          name: "Conceive a place for withdrawal from the environmental conditions.",
           score: 0,
+          optional: true
         },
         {
-          name: "Create a partial refuge place from the main flow of activity, like reading nooks, bay window seats, booth seating, canopy trees, arcades, covered walkways, or porches",
+          name:'Create a partial refuge place from the main flow of activity.',
           score: 0,
+          optional: true
         },
       ],
     },
@@ -35,7 +37,7 @@ const initial = [
       id: "b3",
       scores: [
         {
-          name: "The presence of a focal point and a guiding line to direct visual attention",
+          name: "Presence of a focal point and a guiding.",
           score: 0,
         },
         {
@@ -84,10 +86,12 @@ const initial = [
         {
           name: "Installing operable windows, vents, narrower structures, etc. to reach thermal comfort.",
           score: 0,
+          optional: true
         },
         {
           name: "Encouraging going outside and exposure to natural air by creating shaded outdoor seating.",
           score: 0,
+          optional: true
         },
         {
           name: "Incorporate airflow and thermal conditions into materials.",
@@ -99,16 +103,18 @@ const initial = [
       id: "b7",
       scores: [
         {
-          name: "Create simulated water such as fountains, ponds, water walls, rainwater spouts, aquaria, and so on.",
+          name: "Create simulated water such as fountains, ponds, water walls, rainwater spouts, aquaria.",
           score: 0,
         },
         {
           name: "Access to natural water features like streams, ponds, rivers, oceans, etc.",
           score: 0,
+          optional:true
         },
         {
           name: "Visual access to rainfall and flows.",
           score: 0,
+          optional: true
         },
       ],
     },
@@ -133,10 +139,6 @@ const initial = [
           score: 0,
         },
         {
-          name: "Bring vegetation indoors by indoor green walls and potting plants.",
-          score: 0,
-        },
-        {
           name: "Design landscapes in courtyards, atria, green roofs, etc.",
           score: 0,
         },
@@ -146,11 +148,7 @@ const initial = [
       id: "b10",
       scores: [
         {
-          name: "Fragrant flowers, songbirds, crackling fire.",
-          score: 0,
-        },
-        {
-          name: "Natural ventilation, sun patches, and flowing water.",
+          name: "Fragrant flowers, songbirds, crackling fire, sun patches, or flowing water.",
           score: 0,
         },
         {
@@ -165,10 +163,12 @@ const initial = [
         {
           name: "Present natural scenes, animals, plants, water, or landscapes in photographs or paintings.",
           score: 0,
+          optional: true
         },
         {
           name: "Present images include human survival experiences in nature.",
           score: 0,
+          optional: true
         },
       ],
     },
@@ -176,7 +176,7 @@ const initial = [
       id: "b12",
       scores: [
         {
-          name: "Use natural materials like rock, wood, stone, etc.",
+          name: "Use between 30 and 45 percent natural materials like rock, wood, stone, etc.",
           score: 0,
         },
         {
@@ -197,7 +197,7 @@ const initial = [
           score: 0,
         },
         {
-          name: "Balance between dynamic and diffuse lighting conditions.",
+          name: "Simulate natural light and balance dynamic and diffuse lighting.",
           score: 0,
         },
       ],
@@ -226,22 +226,28 @@ const initial = [
           name: "Evoke natural geometry, forms, and patterns.",
           score: 0,
         },
+        {
+          name:"Using duplicate materials or colours to arrange the various details.",
+          score: 0
+        }
       ],
     },
     {
       id: "b16",
       scores: [
         {
-          name: "Use hierarchically organised ratios, fractions , and scales in designs.",
+          name: "Use hierarchically organised ratios, fractions, and scales in designs.",
           score: 0,
         },
         {
           name: "Use the Golden Ratio (1:1.618) or Fibonacci series (0, 1, 1, 2, 3, 5, 8, 13, 21, 34).",
           score: 0,
+          optional: true
         },
         {
           name: "Choose the intermediate ratio (1:1.3e1.75).",
           score: 0,
+          optional: true
         },
       ],
     },
@@ -251,6 +257,7 @@ const initial = [
         {
           name: "Create winding paths and non-translucent materials.",
           score: 0,
+          optional: true
         },
         {
           name: "Views are medium (≥ 20 ft) to high (≥ 100 ft) in depth of field.",
@@ -259,6 +266,7 @@ const initial = [
         {
           name: "At least one edge of the focal subject is obscured, preferably two edges.",
           score: 0,
+          optional: true
         },
       ],
     },
@@ -287,11 +295,7 @@ const initial = [
           score: 0,
         },
         {
-          name: "Visual order of scene components, through patterning or linkage of scene components.",
-          score: 0,
-        },
-        {
-          name: "Balance and unity are founded on symmetries, repeated elements, content, or colour patterns.",
+          name: "Unity of Visual order of scene components, through colours, patterns, or repeated elements.",
           score: 0,
         },
       ],
@@ -313,15 +317,11 @@ const initial = [
       id: "fw1",
       scores: [
         {
-          name: "Having a variety of workspaces (open-plan offices, informal workspaces, and concentration spaces), giving the employees the freedom to work anywhere.",
+          name: "Having a variety of workspaces (individual, collaborative, formal , informal)",
           score: 0,
         },
         {
-          name: "Create stand-up workstations with treadmills throughout the space.",
-          score: 0,
-        },
-        {
-          name: "Various spaces for both individual private offices and group collaboration workspaces.",
+          name: "Create stand-up workstations.",
           score: 0,
         },
         {
@@ -334,11 +334,11 @@ const initial = [
       id: "fw2",
       scores: [
         {
-          name: "Allow users to control their environment, such as temperature and lighting, through personal lighting.",
+          name: "Allow users to control of temperature and lighting.",
           score: 0,
         },
         {
-          name: "Establishing electrical access everywhere so that people may work anywhere in the building.",
+          name: "Establishing electrical access everywhere so users can work anywhere.",
           score: 0,
         },
         {
@@ -346,7 +346,7 @@ const initial = [
           score: 0,
         },
         {
-          name: "Movable and adjustable furniture like seats and tables with landscape elements.",
+          name: "Movable and adjustable furniture.",
           score: 0,
         },
       ],
@@ -355,16 +355,18 @@ const initial = [
       id: "fw3",
       scores: [
         {
-          name: "Gradient the scale of privacy in the workplace from open-plan offices to semi-private and then private workplaces.",
+          name: "The spaces gradually transition from open-plan to semi-private and finally private spaces.",
           score: 0,
         },
         {
-          name: "Separate open offices by using a colorful or short partition.",
+          name:"Separate private offices by using a colourful or tinted glass partition.",
           score: 0,
+          optional: true
         },
         {
-          name: "Separate open-space offices by using a wood partition or indoor plants.",
+          name: "Separate private offices by using a colourful or tinted glass partition.",
           score: 0,
+          optional: true
         },
       ],
     },
@@ -372,7 +374,7 @@ const initial = [
       id: "fw4",
       scores: [
         {
-          name: "Increase employee communication by integrating hallway whiteboards for brief discussions or clarifications.",
+          name: "Integrating whiteboards for brief discussions or clarifications.",
           score: 0,
         },
         {
@@ -380,11 +382,11 @@ const initial = [
           score: 0,
         },
         {
-          name: "Assembling coworkers to sit in the same section with similar tasks means that workers must be no closer to one another than 2.5 minutes by foot.",
+          name: "Assembling co-workers to be no distance to one another than 2.5 minutes by foot.",
           score: 0,
         },
         {
-          name: "Design community spaces like rooftop gardens and outdoor workspaces.",
+          name: "Design community spaces like rooftop gardens or outdoor workspaces.",
           score: 0,
         },
       ],
@@ -393,15 +395,15 @@ const initial = [
       id: "fw5",
       scores: [
         {
-          name: "Create concentration spaces and reading nooks through elements such as lighting, layout, and types of furniture.",
+          name: "Create concentration spaces through elements such as lighting, layout, and types of furniture.",
           score: 0,
         },
         {
-          name: "Create clusters by dividing the workspace area with glass walls.",
+          name: "Create clusters by dividing the workspace with partitions.",
           score: 0,
         },
         {
-          name: "Use sound-absorbing and insulating materials in spaces that require concentration.",
+          name: "Use sound-absorbing and insulating materials in concentration spaces.",
           score: 0,
         },
       ],
@@ -410,20 +412,22 @@ const initial = [
       id: "fw6",
       scores: [
         {
-          name: "Design that encourages physical activity by using bikes and skateboards to transport between buildings and between amenities inside buildings.",
+          name: "Encourage using bikes and skateboards to transport inside and outside buildings.",
           score: 0,
         },
         {
-          name: "Provide many activities that help in movement, like incorporating a gym and fitness center.",
+          name: "Provide movement activities, like a gym and fitness center.",
           score: 0,
         },
         {
-          name: "Establish outdoor meandering walkways to encourage workers to move around freely.",
+          name: "Establish outdoor meandering walkways to encourage walking freely.",
           score: 0,
+          optional: true
         },
         {
           name: "Enhance the interior experience of space by removing visual barriers.",
           score: 0,
+          optional: true
         },
       ],
     },
@@ -435,11 +439,11 @@ const initial = [
           score: 0,
         },
         {
-          name: "Design courtyards in the building with conversation areas to facilitate group gatherings.",
+          name: "Design courtyards with conversation areas to facilitate group gatherings.",
           score: 0,
         },
         {
-          name: "create an amphitheater-style courtyard with staggered seating levels.",
+          name: "create an amphitheatre-style space with staggered seating levels.",
           score: 0,
         },
       ],
@@ -448,11 +452,15 @@ const initial = [
       id: "sw2",
       scores: [
         {
-          name: "Design informal outdoor and indoor working spaces that allow the social connection between workers.",
+          name: "Provide enough lighting and power outlets for laptops.",
           score: 0,
         },
         {
           name: "Comfortable and flexible pieces of furniture inside and outside the building.",
+          score: 0,
+        },
+        {
+          name: "Variety of private and collaborative seating.",
           score: 0,
         },
       ],
@@ -461,12 +469,18 @@ const initial = [
       id: "sw3",
       scores: [
         {
-          name: "Create a multi-purpose meeting and event room.",
+          name: "Design formal and/ or informal meeting rooms.",
           score: 0,
         },
         {
-          name: "Create diverse open areas, indoor and outdoor.",
+          name: "Create a multi-purpose meeting and event room.",
+          optional:true,
           score: 0,
+        },
+        {
+          name: "Create diverse open areas, indoor and outdoor for celebrating.",
+          score: 0,
+          optional: true
         },
       ],
     },
@@ -482,7 +496,7 @@ const initial = [
           score: 0,
         },
         {
-          name: "Create small shopping spaces.",
+          name: "Design entertainment space for sitting freely, playing, or relaxing.",
           score: 0,
         },
       ],
@@ -492,6 +506,10 @@ const initial = [
       scores: [
         {
           name: "Create a meditation or massage room for workers to relieve stress.",
+          score: 0,
+        },
+        {
+          name:"Design outdoor shaded seating for relaxation in nature.",
           score: 0,
         },
         {
@@ -510,22 +528,20 @@ const initial = [
         {
           name: "Design small open kitchens in the building.",
           score: 0,
+          optional: true
         },
+        {
+          name: "Create a bar for drinks.",
+          score: 0,
+          optional: true
+        }
       ],
     },
   ];
   
 
-const strategiesSlice = createSlice({
-    name: "strategies",
-    initialState: initial,
-    reducers: {updateStrategy},
-  })
-
-
-
   //update scores of strategies [STRATEGY SLICE]
-function updateStrategy(state, action) {
+  function updateStrategy(state, action) {
     console.log('updating attr of id: ', action.payload.id)
     const {type, id, i} = action.payload;
     const targetAttr = state.find((item) => item.id === id);
@@ -538,6 +554,18 @@ function updateStrategy(state, action) {
     }
     console.log('state: ', state)
   }
+
+
+  // reset all 
+  const resetStrategies = (state) => state = initial
+
+
+
+const strategiesSlice = createSlice({
+    name: "strategies",
+    initialState: initial,
+    reducers: {updateStrategy, resetStrategies},
+  })
 
   export default strategiesSlice.reducer
   const actions = strategiesSlice.actions

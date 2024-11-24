@@ -1,20 +1,43 @@
 import classes from "./addscore.module.css";
 import NumberInputWithStatus from "./NumberInput";
 import { useSelector } from "react-redux";
-import {memo} from 'react';
+import { memo } from "react";
 
-const AddScore = ({ id }) => {
-  const strategy= useSelector((state) => state.strategies.find((item) => item.id === id));
-  console.log('strategyToFind: ', strategy, 'for id: ');
-  // const totalWeight = strategy.scores.reduce((acc, score) => acc + score.multiplier, 0);
-  const content = strategy.scores.map((score,i) => {
-    return (
-      <div key={Math.floor(Math.random())} className={classes.container}>
-        <span key={Math.floor(Math.random())}>{score.name}</span>
-        <NumberInputWithStatus key={Math.floor(Math.random())} id={id} i={i} />
+const AddScore = ({ id, type }) => {
+  let strategy = useSelector((state) =>
+    state.strategies.find((item) => item.id === id)
+  );
+  let content = null;
+  if (type === "occu") {
+    strategy = useSelector((state) =>
+      state.occupational.find((item) => item.id === id)
+    );
+    content = (
+      <div key={strategy.name} className={classes.container}>
+        <span key={strategy.name}>{strategy.name}</span>
+        <NumberInputWithStatus key={strategy.name} id={id} type={type} />
       </div>
     );
-  });
+  }
+  // console.log('strategyToFind: ', strategy, 'for id: ');
+  else {
+    content = strategy.scores.map((score, i) => {
+      return (
+        <div
+          key={Math.floor(Math.random())}
+          className={classes.container}
+          style={{ borderColor: score.optional ? "purple" : "gray" }}
+        >
+          <span key={Math.floor(Math.random())}>{score.name}</span>
+          <NumberInputWithStatus
+            key={Math.floor(Math.random())}
+            id={id}
+            i={i}
+          />
+        </div>
+      );
+    });
+  }
   return <>{content}</>;
 };
 

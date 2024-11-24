@@ -1,7 +1,11 @@
 import { useState } from "react";
 import classes from "./bigButton.module.css";
 import TreeGenerator from "./TreeGenerator";
-const BigButton = ({ keyName, configs, color }) => {
+import {actions as attrActions} from "./store/AttributesSlice";
+import {useDispatch} from "react-redux";
+const BigButton = ({ keyName, configs, color, execlude }) => {
+  const dispatch = useDispatch();
+  dispatch(attrActions.execludeAttributes({execludeArray:execlude}));
   //state to manage tree appearance
   const [configActive, setConfig] = useState(false);
   // on click show or hide the tree
@@ -25,7 +29,7 @@ const BigButton = ({ keyName, configs, color }) => {
       <button className={classes.bigbtn} style={{ backgroundColor: color }} onClick={clickHandler}>
         {keyName}
       </button>
-      <div>{configActive && <TreeGenerator data={configs}/>}</div>
+      <div>{configActive && <TreeGenerator data={configs} execlude={execlude} />}</div>
     </div>
   );
 };

@@ -171,7 +171,7 @@ const initial = [
 const attributesSlice = createSlice({
   name: "attributes",
   initialState: initial,
-  reducers: { addScore},
+  reducers: { addScore, execludeAttributes, resetAttributes},
 });
 
 function addScore(state, action) {
@@ -189,6 +189,22 @@ function getOneScore(score, multiplier, totalWeight) {
     return effect;
   }
 
+  // function to execlude attribute 
+  function execludeAttributes(state, action) {
+    const {execludeArray} = action.payload;
+    state.forEach(attr => {
+      console.log('attr: ', attr)
+      if (execludeArray.includes(attr.name)) {
+        attr.share = 0;
+      }
+    });
+    console.log('state wxecluded: ', state)
+  }
+
+  // reset attributes
+  function resetAttributes(state) {
+    state = initial
+  }
 export default attributesSlice.reducer
  const actions = attributesSlice.actions
  export {actions}

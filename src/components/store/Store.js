@@ -2,11 +2,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import strategiesReducer from './StrategiesSlice';
 import attributesReducer from './AttributesSlice';
-
+import occupationalReducer from './Occupational';
+import SpacesSlice from "./SpacesSlice";
 const store = configureStore({
   reducer: {
     strategies: strategiesReducer,
-    attributes: attributesReducer
+    attributes: attributesReducer,
+    occupational: occupationalReducer,
+    spaces: SpacesSlice
   }
 });
 

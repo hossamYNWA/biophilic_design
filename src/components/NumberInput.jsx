@@ -1,11 +1,12 @@
-import {memo} from "react";
+import { memo } from "react";
 import React from "react";
 import "@patternfly/react-core/dist/styles/base.css";
 import "./font.css";
 import { NumberInput, ValidatedOptions } from "@patternfly/react-core";
 import { useDispatch } from "react-redux";
 import { actions as strActions } from "./store/StrategiesSlice";
-const NumberInputWithStatus = ({id,i}) => {
+import { actions as occu_actions } from "./store/Occupational";
+const NumberInputWithStatus = ({ id, i, type }) => {
   const max = 3;
   const min = 0;
   const [validated, setValidated] = React.useState(ValidatedOptions.success);
@@ -14,22 +15,32 @@ const NumberInputWithStatus = ({id,i}) => {
     0
   );
   const dispatch = useDispatch();
-  
+
   const onPlus = () => {
     const newVal = (value || 0) + 1;
     setValue(newVal);
     validate(newVal);
-    const payload = {type:'inc', id, i};
+    const payload = { type: "inc", id, i };
+    if (type === "occu") {
+      dispatch(occu_actions.addOneScore(payload));
+      return;
+    }
     dispatch(strActions.updateStrategy(payload));
-    console.log('onePlus')
+    console.log("onePlus");
   };
   const onMinus = () => {
     const newVal = (value || 0) - 1;
     setValue(newVal);
     validate(newVal);
-    const payload = {type:'dec', id, i};
+    const payload = { type: "dec", id, i };
+    if (type === "occu") {
+      console.log("updating occupational payload: ", payload);
+      dispatch(occu_actions.addOneScore(payload));
+      return;
+    }
     dispatch(strActions.updateStrategy(payload));
-    console.log('oneMinus')
+  
+    console.log("oneMinus");
   };
   const onChange = (event) => {
     const value = event.target.value;

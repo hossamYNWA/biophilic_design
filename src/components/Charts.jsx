@@ -1,7 +1,10 @@
 import MultiColorChart from "./LineChart";
 import PieChart from "./PieChart";
 import classes from "./Charts.module.css";
+import DonutChart from "./DonutChart";
 import { useSelector } from "react-redux";
+import SpacesCharts from "./SpacesCharts";
+import { Link, Outlet } from "react-router-dom";
 
 // function to get the total score of category
 function getCatScore(attr, scores) {
@@ -11,6 +14,7 @@ function getCatScore(attr, scores) {
 }
 const Charts = () => {
   const attributes = useSelector((state) => state.attributes);
+  const optimizedAttributes = attributes.filter((attr) => attr.share > 0);
   const categories = [
     {
       name: "Attributes that permit restoration",
@@ -58,10 +62,21 @@ const Charts = () => {
       ]),
     },
   ];
+
+  // get total score from categories
+  const totalScore = attributes.reduce((acc, attr) => acc + attr.score, 0);
+
   return (
     <div className={classes.charts}>
-      <MultiColorChart attributes={attributes}/>
-      <PieChart categories={categories}/>
+      <MultiColorChart attributes={optimizedAttributes} />
+      <div className={classes.pies}>
+        <DonutChart totalScore={totalScore} scale='1.4' width='430px' radius={80}/>
+        <PieChart categories={categories} />
+      </div>
+      <SpacesCharts/>
+      <Link className={classes.acculink} to='occu-charts'>View occupational charts</Link>
+      <Link className={classes.acculink} to='/'>to Homepage</Link>
+      {<Outlet />}
     </div>
   );
 };
