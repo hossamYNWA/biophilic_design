@@ -70,12 +70,34 @@ const Charts = () => {
     <div className={classes.charts}>
       <MultiColorChart attributes={optimizedAttributes} />
       <div className={classes.pies}>
-        <DonutChart totalScore={totalScore} scale='1.4' width='430px' radius={80}/>
+        <DonutChart
+          totalScore={totalScore}
+          scale="1.4"
+          width="430px"
+          radius={80}
+        />
         <PieChart categories={categories} />
       </div>
-      <SpacesCharts/>
-      <Link className={classes.acculink} to='occu-charts'>View occupational charts</Link>
-      <Link className={classes.acculink} to='/'>to Homepage</Link>
+      <SpacesCharts />
+      <Link className={classes.acculink} to="occu-charts">
+        View occupational charts
+      </Link>
+      <Link
+        style={{
+          position: "fixed",
+          bottom: "10px",
+          right: "10px",
+          zIndex: "1000",
+          textDecoration: "none",
+          borderRadius: "5px",
+          backgroundColor: "whitesmoke",
+          padding: "10px",
+        }}
+        className={classes.acculink}
+        to="/"
+      >
+        to Homepage
+      </Link>
       {<Outlet />}
     </div>
   );

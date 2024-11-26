@@ -8,9 +8,9 @@ const Home = () => {
           <img src="https://i.ibb.co/S7Gs7VV/logoo.png" alt="logo" />
         </div>
       </header> */}
-      <div className={classes.img_container}>
+      {/* <div className={classes.img_container}>
         <img src="https://i.ibb.co/fShGMC8/bg-1.jpg" alt="poster" />
-      </div>
+      </div> */}
       <div className={classes.spaces}>
         <Link to="/tree/0">
           <h2>Spaces for Formal Working</h2>
@@ -27,6 +27,15 @@ const Home = () => {
           <h2>Spaces for taking a break </h2>{" "}
         </Link>
       </div>
+      <div className={classes.title}>
+        <h1>restoration evaluation application</h1>
+        <h3>for improving psychological restoration in workplaces</h3>
+        <h5>designed by: <span style={{fontWeight: "bold"}}>Eng.Mariam Abdelghany</span></h5>
+
+      </div>
+      <div className={classes.logo}>
+          <img src="https://i.ibb.co/S7Gs7VV/logoo.png" alt="logo" />
+        </div>
     </div>
   );
 };
