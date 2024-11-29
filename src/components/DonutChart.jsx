@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChartDonutUtilization } from "@patternfly/react-charts/victory";
-const DonutChart = ({ totalScore, scale , width, radius}) => {
+const DonutChart = ({ space, totalScore, scale , width, radius}) => {
   const [spacer, setSpacer] = useState("");
   const [used, setUsed] = useState(0);
 
@@ -25,7 +25,7 @@ const DonutChart = ({ totalScore, scale , width, radius}) => {
         labels={({ datum }) => (datum.x ? `${datum.x}: ${datum.y}%` : null)}
         legendData={[
           { name: `Storage capacity: ${spacer}${used}%` },
-          { name: "Unused" },
+          { name: space? space: "Unused" },
         ]}
         legendOrientation="vertical"
         legendPosition='bottom'

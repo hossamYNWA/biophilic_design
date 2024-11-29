@@ -5,6 +5,8 @@ const SpacesCharts = () => {
     console.log(spaces)
   const content = spaces.map((space) => (
     <DonutChart
+      key={space.id}
+      space={space.name}
       totalScore={space.score}
       scale="0.8"
       width="200px"

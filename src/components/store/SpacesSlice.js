@@ -3,25 +3,25 @@ import { createSlice } from "@reduxjs/toolkit";
 const initial = [
   {
     id: "s1",
-    name: "formal",
+    name: "Formal",
     score: 0,
     selected: false,
   },
   {
     id: "s2",
-    name: "informal",
+    name: "Informal",
     score: 0,
     selected: false,
   },
   {
     id: "s3",
-    name: "gathering",
+    name: "Gathering",
     score: 0,
     selected: false,
   },
   {
     id: "s4",
-    name: "break",
+    name: "Break",
     score: 0,
     selected: false,
   },

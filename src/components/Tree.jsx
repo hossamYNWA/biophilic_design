@@ -7,10 +7,11 @@ import { useDispatch } from "react-redux";
 import { actions as attrActions } from "./store/AttributesSlice";
 import { actions as strategiesActions } from "./store/StrategiesSlice";
 import { actions as spacesActions } from "./store/SpacesSlice";
-
+// f6c899
 const occuData = [
   {
-    name: "users",
+    color:'var(--pf-t--color--orange--50)',
+    name: "Users",
     attrbutes: [
       {
         id:'oc1',
@@ -30,9 +31,11 @@ const occuData = [
     ],
   },
   {
+    color:'var(--pf-t--color--orange--50)',
     name: "Activities",
     attrbutes: [
       {
+        color:'var(--pf-t--color--orange--40)',
         name: "neccessary",
         attrbutes: [
           {
@@ -53,6 +56,7 @@ const occuData = [
         ],
       },
       {
+        color:'var(--pf-t--color--orange--40)',
         name: "optional",
         attrbutes: [
           {
@@ -88,6 +92,7 @@ const occuData = [
         ],
       },
       {
+        color:'var(--pf-t--color--orange--40)',
         name:'social',
         attrbutes:[
             {
@@ -117,31 +122,31 @@ const occuData = [
 ];
 const DATA = [
   {
-    color: "var(--pf-t--color--gray--40)",
+    color: "var(--pf-t--color--gray--30)",
     last: false,
     name: "Biophilic design attributes",
     value: [
       {
-        color: "var(--pf-t--color--orange--40)",
+        color: "var(--pf-t--color--yellow--30)",
         name: "Attributes that permit restoration",
         value: [
-          { color:'var(--pf-t--color--orange--20', last: true, id: "b1", name: "B01- Access", score: 0 },
-          { color:'var(--pf-t--color--orange--20', last: true, id: "b2", name: "B02- Prospect and refuge", score: 0 },
-          {color:'var(--pf-t--color--orange--20',
+          { color:'var(--pf-t--color--yellow--20', last: true, id: "b1", name: "B01- Access", score: 0 },
+          { color:'var(--pf-t--color--yellow--20', last: true, id: "b2", name: "B02- Prospect and refuge", score: 0 },
+          {color:'var(--pf-t--color--yellow--20',
             last: true,
             id: "b3",
             name: "B03- Information gathering support",
             score: 0,
           },
-          {color:'var(--pf-t--color--orange--20', last: true, id: "b4", name: "B04- Compatibility", score: 0 },
+          {color:'var(--pf-t--color--yellow--20', last: true, id: "b4", name: "B04- Compatibility", score: 0 },
         ],
         last: false,
       },
-      { color:'var(--pf-t--color--green--60',
+      { color:'var(--pf-t--color--green--40',
         name: "Attributes that promote restoration",
         value: [
           {
-            color:'var(--pf-t--color--green--20',
+            color:'var(--pf-t--color--green--30',
             name: "Direct Natural Attributes",
             value: [
               {
@@ -190,32 +195,32 @@ const DATA = [
             last: false,
           },
           {
-            color:'var(--pf-t--color--green--40',
+            color:'var(--pf-t--color--green--30',
             name: "Indirect Natural Attributes",
             value: [
               {
-                color:'var(--pf-t--color--green--40',
+                color:'var(--pf-t--color--green--20',
                 name: "B11- Images of nature",
                 id: "b11",
                 score: 0,
                 last: true,
               },
               {
-                color:'var(--pf-t--color--green--40',
+                color:'var(--pf-t--color--green--20',
                 name: "B12- Natural materials and colours",
                 id: "b12",
                 score: 0,
                 last: true,
               },
               {
-                color:'var(--pf-t--color--green--40',
+                color:'var(--pf-t--color--green--20',
                 name: "B13- Simulating natural light and air",
                 id: "b13",
                 score: 0,
                 last: true,
               },
               {
-                color:'var(--pf-t--color--green--40',
+                color:'var(--pf-t--color--green--20',
                 name: "B14- Biomorphic forms and patterns",
                 id: "b14",
                 score: 0,
@@ -225,46 +230,46 @@ const DATA = [
             last: false,
           },
           {
-            color:'var(--pf-t--color--green--60',
+            color:'var(--pf-t--color--green--30',
             name: "Space and Place Attributes",
             value: [
               {
-                color:'var(--pf-t--color--green--60',
+                color:'var(--pf-t--color--green--20',
                 name: "B15- Organized complexity",
                 id: "b15",
                 score: 0,
                 last: true,
               },
               {
-                color:'var(--pf-t--color--green--60',
+                color:'var(--pf-t--color--green--20',
                 name: "B16- Integrated structural form",
                 id: "b16",
                 score: 0,
                 last: true,
               },
               {
-                color:'var(--pf-t--color--green--60',
+                color:'var(--pf-t--color--green--20',
                 name: "B17- Mystery",
                 id: "b17",
                 score: 0,
                 last: true,
               },
               {
-                color:'var(--pf-t--color--green--60',
+                color:'var(--pf-t--color--green--20',
                 name: "B18- Depth",
                 id: "b18",
                 score: 0,
                 last: true,
               },
               {
-                color:'var(--pf-t--color--green--60',
+                color:'var(--pf-t--color--green--20',
                 name: "B19- Coherence",
                 id: "b19",
                 score: 0,
                 last: true,
               },
               {
-                color:'var(--pf-t--color--green--60',
+                color:'var(--pf-t--color--green--20',
                 name: "B20- Openness",
                 id: "b20",
                 score: 0,
@@ -388,19 +393,19 @@ const DATA = [
 
 const titles = [{
   name:"Spaces for Formal Working",
-  execlude:['b7','b15','b16','b17','b18','fw4','fw6','sw1','sw2','sw3','sw4','sw5','sw6']
+  execlude:['b7','b15','b16','b17','b18','fw6','sw1','sw2','sw3','sw4','sw5','sw6']
 },
   {
     name:"Spaces for Informal Working",
-    execlude:['b7','b16','b17','b18','sw3','sw4','sw5','sw6']
+    execlude:['b7','b16','b17','b18','fw6','sw4','sw5','sw6']
   }
   , {
     name:"Spaces for gathering",
-    execlude:['fw5','sw4','sw5']
+    execlude:['fw1','fw4','fw5']
   },
   {
     name:"Spaces for taking a break",
-    execlude:['b15','b17','fw1','fw2','fw3','fw4','fw5']
+    execlude:['b15','b17','fw1','fw4','fw5']
   }
 ];
 
