@@ -392,19 +392,19 @@ const DATA = [
 ];
 
 const titles = [{
-  name:"Spaces for Formal Working",
+  name:"Formal Spaces",
   execlude:['b7','b15','b16','b17','b18','fw6','sw1','sw2','sw3','sw4','sw5','sw6']
 },
   {
-    name:"Spaces for Informal Working",
+    name:"Informal Spaces",
     execlude:['b7','b16','b17','b18','fw6','sw4','sw5','sw6']
   }
   , {
-    name:"Spaces for gathering",
+    name:"Gathering Spaces",
     execlude:['fw1','fw4','fw5']
   },
   {
-    name:"Spaces for taking a break",
+    name:"Relaxing and Taking Break Spaces",
     execlude:['b15','b17','fw1','fw4','fw5']
   }
 ];
