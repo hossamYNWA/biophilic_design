@@ -393,19 +393,19 @@ const DATA = [
 
 const titles = [{
   name:"Formal Spaces",
-  execlude:['b7','b15','b16','b17','b18','fw6','sw1','sw2','sw3','sw4','sw5','sw6']
+  execlude:['b7','b14','b15','b16','b17','b18','b20','fw6','sw1','sw2','sw3','sw4','sw5','sw6']
 },
   {
     name:"Informal Spaces",
-    execlude:['b7','b16','b17','b18','fw6','sw4','sw5','sw6']
+    execlude:['b7','b14','b16','b17','b18','fw6','sw4','sw5','sw6']
   }
   , {
     name:"Gathering Spaces",
-    execlude:['fw1','fw4','fw5']
+    execlude:['b13','fw1','fw4','fw5']
   },
   {
     name:"Relaxing and Taking Break Spaces",
-    execlude:['b15','b17','fw1','fw4','fw5']
+    execlude:['b15','b16','b17','fw1','fw4','fw5']
   }
 ];
 

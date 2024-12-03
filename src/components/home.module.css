@@ -56,11 +56,12 @@
  .logo {
  position: fixed;
  height: 100vh;
- left: 30px;
+ left: 5px;
  top: 0;
- background-color:#dde8d2c8;
+ /* background-color:#dde8d2c8; */
  /* opacity: 0.5; */
  width: 202px;
+ opacity:0.8
 }
 
 .logo img {

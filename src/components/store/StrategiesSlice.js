@@ -56,10 +56,12 @@ const initial = [
         {
           name: "The built environment and activities seem to fit together quite naturally.",
           score: 0,
+          optional: true
         },
         {
           name: "The place provides many enjoyable activities that are compatible with users' desires",
           score: 0,
+          optional: true
         },
       ],
     },
@@ -137,10 +139,12 @@ const initial = [
         {
           name: "Create landscapes such as grasslands, prairies, and other habitats.",
           score: 0,
+          optional: true
         },
         {
           name: "Design landscapes in courtyards, atria, green roofs, etc.",
           score: 0,
+          optional: true
         },
       ],
     },
@@ -364,7 +368,7 @@ const initial = [
           optional: true
         },
         {
-          name: "Separate private offices by using a colourful or tinted glass partition.",
+          name: "Separate open-space offices by using a wood partition or indoor plants.",
           score: 0,
           optional: true
         },
@@ -380,15 +384,18 @@ const initial = [
         {
           name: "Create open floors and dynamic workspaces for teamwork and partitions and translucent walls.",
           score: 0,
+          optional: true
+        },
+        {
+          name: "Design community spaces like rooftop gardens or outdoor workspaces.",
+          score: 0,
+          optional: true
         },
         {
           name: "Assembling co-workers to be no distance to one another than 2.5 minutes by foot.",
           score: 0,
         },
-        {
-          name: "Design community spaces like rooftop gardens or outdoor workspaces.",
-          score: 0,
-        },
+
       ],
     },
     {

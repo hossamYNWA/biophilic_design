@@ -74,6 +74,7 @@ const CalculateScore = () => {
     dispatch(attrActions.resetAttributes());
     dispatch(spacesActions.resetSpaces());
     dispatch(strActions.resetStrategies());
+    window.location.reload();
   };
   return (
     <div className={classes.container}>

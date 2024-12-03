@@ -1,14 +1,13 @@
-import { Chart, ChartBar, ChartVoronoiContainer } from '@patternfly/react-charts/victory';
-
+import {Chart, ChartBar, ChartVoronoiContainer } from '@patternfly/react-charts/victory';
 const BarChart = ({category,data }) => (
   <div style={{ height: '250px', width: '600px' }}>
     <Chart
       ariaDesc="Average number of pets"
       ariaTitle="Bar chart example"
       containerComponent={
-        <ChartVoronoiContainer labels={({ datum }) => `${datum.name}: ${datum.y}`} constrainToVisibleArea />
+        <ChartVoronoiContainer labels={({ datum }) => `${datum.x}: ${datum.y}%`} constrainToVisibleArea />
       }
-      domain={{ y: [0, 9] }}
+      domain={{ y: [10, 100] }}
       domainPadding={{ x: [30, 25] }}
       legendData={[{ name: category }]}
       legendOrientation="vertical"
@@ -29,5 +28,6 @@ const BarChart = ({category,data }) => (
     </Chart>
   </div>
 )
+
 
 export default BarChart

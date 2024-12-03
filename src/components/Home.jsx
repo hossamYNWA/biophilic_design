@@ -1,4 +1,5 @@
 import classes from "./home.module.css";
+import logo from "./images/logo2-nobg.png";
 import { Link } from "react-router-dom";
 const Home = () => {
   return (
@@ -13,18 +14,18 @@ const Home = () => {
       </div> */}
       <div className={classes.spaces}>
         <Link to="/tree/0">
-          <h2>Spaces for Formal Working</h2>
+          <h2>Formal Spaces</h2>
         </Link>
         <Link to="/tree/1">
-          <h2>Spaces for Informal Working</h2>
+          <h2>Informal Spaces</h2>
         </Link>
         <Link to="/tree/2">
           {" "}
-          <h2>Spaces for gathering </h2>{" "}
+          <h2>Gathering Spaces</h2>{" "}
         </Link>
         <Link to="/tree/3">
           {" "}
-          <h2>Spaces for taking a break </h2>{" "}
+          <h2>Relaxing and Taking Break Spaces</h2>{" "}
         </Link>
       </div>
       <div className={classes.title}>
@@ -34,7 +35,7 @@ const Home = () => {
 
       </div>
       <div className={classes.logo}>
-          <img src="https://i.ibb.co/S7Gs7VV/logoo.png" alt="logo" />
+          <img src={logo} alt="logo" />
         </div>
     </div>
   );
