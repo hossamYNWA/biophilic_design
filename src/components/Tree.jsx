@@ -401,11 +401,11 @@ const titles = [{
   }
   , {
     name:"Gathering Spaces",
-    execlude:['b13','fw1','fw4','fw5']
+    execlude:['b13','b16','fw1','fw4','fw5']
   },
   {
     name:"Relaxing and Taking Break Spaces",
-    execlude:['b15','b16','b17','fw1','fw4','fw5']
+    execlude:['b13','b15','b16','b17','fw1','fw4','fw5']
   }
 ];
 
