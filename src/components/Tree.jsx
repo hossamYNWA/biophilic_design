@@ -122,7 +122,7 @@ const occuData = [
 ];
 const DATA = [
   {
-    color: "var(--pf-t--color--gray--30)",
+    color: "var(--pf-t--color--gray--20)",
     last: false,
     name: "Biophilic design attributes",
     value: [
@@ -284,7 +284,7 @@ const DATA = [
     ],
   },
   {
-    color: "var(--pf-t--color--gray--40)",
+    color: "var(--pf-t--color--gray--20)",
     last: false,
     name: "Characteristics for wellbeing in workspaces",
     value: [

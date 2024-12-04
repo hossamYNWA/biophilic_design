@@ -26,7 +26,7 @@ const AddScore = ({ id, type }) => {
         <div
           key={Math.floor(Math.random())}
           className={classes.container}
-          style={{ borderColor: score.optional ? "purple" : "gray" }}
+          style={{ border: score.optional ? "1px dashed gray" : "1px solid #198b5a" }}
         >
           <span key={Math.floor(Math.random())}>{score.name}</span>
           <NumberInputWithStatus

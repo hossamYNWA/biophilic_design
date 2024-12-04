@@ -62,13 +62,16 @@ const Charts = () => {
       ]),
     },
   ];
-
+  // separationg the optimized categories
+  const bCategories = optimizedAttributes.filter((attr) => attr.name.startsWith("b"));
+  const fsCategories = optimizedAttributes.filter((attr) => attr.name.startsWith("f") || attr.name.startsWith("s"));
   // get total score from categories
   const totalScore = attributes.reduce((acc, attr) => acc + attr.score, 0);
 
   return (
     <div className={classes.charts}>
-      <MultiColorChart attributes={optimizedAttributes} />
+      <MultiColorChart attributes={bCategories} title='Biophilic Attributes' />
+      <MultiColorChart attributes={fsCategories} title='Functional and Social Attributes' />
       <div className={classes.pies}>
         <DonutChart
           totalScore={totalScore}
@@ -76,7 +79,7 @@ const Charts = () => {
           width="430px"
           radius={80}
         />
-        <PieChart categories={categories} />
+        <PieChart categories={categories} totalScore={totalScore} />
       </div>
       <SpacesCharts />
       <Link className={classes.acculink} to="occu-charts">

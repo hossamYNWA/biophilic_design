@@ -90,7 +90,7 @@ import {
 import { getResizeObserver } from "@patternfly/react-core";
 import { VictoryZoomContainer } from "victory-zoom-container";
 
-const MultiColorChart = ({ attributes }) => {
+const MultiColorChart = ({ attributes,title }) => {
   const dataToDisplay = attributes.map((attr, index, array) => {
     let name = null;
     if (attr.name.length === 2) {
@@ -100,10 +100,10 @@ const MultiColorChart = ({ attributes }) => {
     } else {
       name = attr.name;
     }
-    const shareConstant = 4.682 - array.length*0.0911
+    const shareConstant = 4.862 - array.length*0.0911
     const maxScore = attr.share * shareConstant 
     const avScore = (attr.score / maxScore)*100
-    // console.log('array length: ' + array.length + 'CONSTAT: ' + shareConstant + '\n max: ' + maxScore + "avScore: ", avScore)
+    console.log('attrScore' + attr.score+ ' array length: ' + array.length + ' CONSTAT: ' + shareConstant + '\n max: ' + maxScore + "avScore: ", avScore)
     return { x: name.toUpperCase(), y: avScore};
   });
 
@@ -134,7 +134,8 @@ const MultiColorChart = ({ attributes }) => {
   }
 
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} style={{marginTop:'100px'}}>
+      <h2 style={{ color: "rgb(48, 74, 13)", fontSize: "2rem", margin: "10px", fontWeight: "bold", textAlign:'center'}}>{title}</h2>
       <div style={{ height: "475px" }}>
         <Chart
           ariaDesc="Line chart example"

@@ -43,10 +43,12 @@ const initial = [
         {
           name: "Degree of visual transparency and the presence of wayfinding tools in the scene.",
           score: 0,
+          optional: true
         },
         {
           name: "Encourage exploration by using complex details in forms and motifs.",
           score: 0,
+          optional: true
         },
       ],
     },
@@ -195,10 +197,12 @@ const initial = [
         {
           name: "Simulate weather conditions such as temperature, barometric pressure, and humidity.",
           score: 0,
+          optional:true
         },
         {
           name: "Simulate natural air and ventilation through HVAC delivery strategy, etc.",
           score: 0,
+          optional:true
         },
         {
           name: "Simulate natural light and balance dynamic and diffuse lighting.",
@@ -225,10 +229,12 @@ const initial = [
         {
           name: "Arrange rich and complex details in an orderly manner.",
           score: 0,
+          optional: true
         },
         {
           name: "Evoke natural geometry, forms, and patterns.",
           score: 0,
+          optional: true
         },
         {
           name:"Using duplicate materials or colours to arrange the various details.",
@@ -448,10 +454,12 @@ const initial = [
         {
           name: "Design courtyards with conversation areas to facilitate group gatherings.",
           score: 0,
+          optional: true
         },
         {
           name: "create an amphitheatre-style space with staggered seating levels.",
           score: 0,
+          optional:true
         },
       ],
     },
