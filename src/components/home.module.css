@@ -98,7 +98,7 @@
   text-decoration: none;
   color: #272920;
   min-height: 65px;
-  width: 65%;
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,6 +116,19 @@
 .spaces a h2 {
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(218 223 207);
+  padding: 2px 0;
+  font-size: 11px;
+  z-index: 3;
+  font-weight: bold;
+  color: darkolivegreen
 }
 @media screen and (max-width: 568px) {
   .spaces {

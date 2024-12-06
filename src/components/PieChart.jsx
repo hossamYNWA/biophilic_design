@@ -6,18 +6,22 @@ import {
 } from "@patternfly/react-charts/victory";
 
 const PieChart = ({ categories, totalScore }) => {
+  const unach = 100 - totalScore;
   const dataToDisplay = categories.map((cat) => {
     const name = cat.name;
-    const score = (cat.score * 100) / totalScore;
+    // const score = (cat.score * 100) / totalScore;
+    const score = cat.score;
     if (score > 0) {
       return { x: name, y: score };
     } else {
       return null;
     }
   });
+  dataToDisplay.push({ x: "unachieved attributes", y: unach});
   const legData = categories.map((cat) => {
-    return { name: `${cat.name}: ${cat.score}` };
+    return { name: `${cat.name}: ${cat.score}%` };
   });
+
   return (
     <div style={{ height: "fit-content", width: "300px" }}>
       <ChartPie
@@ -38,7 +42,7 @@ const PieChart = ({ categories, totalScore }) => {
         width={300}
       />
       <ChartLegend
-        data={legData}
+        data={[...legData, { name: `unachieved attributes: ${unach}%` }]}
         orientation="vertical"
         gutter={20}
         themeColor={ChartThemeColor.multiOrdered}

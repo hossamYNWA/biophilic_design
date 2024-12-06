@@ -86,7 +86,7 @@ const occuData = [
           },
           {
             id:'oc12',
-            name: "Viewing",
+            name: "Viewing Nature",
             score: 0,
           }
         ],
@@ -392,11 +392,11 @@ const DATA = [
 ];
 
 const titles = [{
-  name:"Formal Spaces",
+  name:"Formal Workspaces",
   execlude:['b7','b14','b15','b16','b17','b18','b20','fw6','sw1','sw2','sw3','sw4','sw5','sw6']
 },
   {
-    name:"Informal Spaces",
+    name:"Informal Workspaces",
     execlude:['b7','b14','b16','b17','b18','fw6','sw4','sw5','sw6']
   }
   , {

@@ -14,10 +14,10 @@ const Home = () => {
       </div> */}
       <div className={classes.spaces}>
         <Link to="/tree/0">
-          <h2>Formal Spaces</h2>
+          <h2>Formal Workspaces</h2>
         </Link>
         <Link to="/tree/1">
-          <h2>Informal Spaces</h2>
+          <h2>Informal Workspaces</h2>
         </Link>
         <Link to="/tree/2">
           {" "}
@@ -29,14 +29,21 @@ const Home = () => {
         </Link>
       </div>
       <div className={classes.title}>
-        <h1>restoration evaluation application</h1>
-        <h3>for improving psychological restoration in workplaces</h3>
-        <h5>designed by: <span style={{fontWeight: "bold"}}>Eng.Mariam Abdelghany</span></h5>
-
+        <h1>restoration <span style={{ color: "var(--pf-t--color--orange--30" }}>evaluator</span> application</h1>
+        <h3 style={{ color: "var(--pf-t--color--orange--10" }}>
+          for improving psychological restoration in workplaces
+        </h3>
+        <h5>
+          designed by:{" "}
+          <span style={{ fontWeight: "bold" }}>Eng.Mariam Abdelghany</span>
+        </h5>
       </div>
       <div className={classes.logo}>
-          <img src={logo} alt="logo" />
-        </div>
+        <img src={logo} alt="logo" />
+      </div>
+      <footer className={classes.footer}>
+        Developed by: Hossam Mousa
+      </footer>
     </div>
   );
 };

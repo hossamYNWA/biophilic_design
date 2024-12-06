@@ -29,7 +29,7 @@ const Charts = () => {
       score: getCatScore(attributes, ["b11", "b12", "b13", "b14"]),
     },
     {
-      name: "Space and place attributes",
+      name: "Space and place attributes that promote restoration",
       score: getCatScore(attributes, [
         "b15",
         "b16",
@@ -40,7 +40,7 @@ const Charts = () => {
       ]),
     },
     {
-      name: "Functional and physical wellbeing",
+      name: "Functional and physical wellbeing characteristics",
       score: getCatScore(attributes, [
         "fw1",
         "fw2",
@@ -51,7 +51,7 @@ const Charts = () => {
       ]),
     },
     {
-      name: "Social wellbeing",
+      name: "Social wellbeing characteristics",
       score: getCatScore(attributes, [
         "sw1",
         "sw2",
