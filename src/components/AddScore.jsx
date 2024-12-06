@@ -24,11 +24,11 @@ const AddScore = ({ id, type }) => {
     content = strategy.scores.map((score, i) => {
       return (
         <div
-          key={Math.floor(Math.random())}
+          key={Math.floor(Math.random()*908)}
           className={classes.container}
           style={{ border: score.optional ? "1px dashed gray" : "1px solid #198b5a" }}
         >
-          <span key={Math.floor(Math.random())}>{score.name}</span>
+          <span key={Math.floor(Math.random()*975)}>{score.name}</span>
           <NumberInputWithStatus
             key={Math.floor(Math.random())}
             id={id}

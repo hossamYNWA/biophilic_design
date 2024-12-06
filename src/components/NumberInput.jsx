@@ -6,7 +6,7 @@ import { NumberInput, ValidatedOptions } from "@patternfly/react-core";
 import { useDispatch } from "react-redux";
 import { actions as strActions } from "./store/StrategiesSlice";
 import { actions as occu_actions } from "./store/Occupational";
-const NumberInputWithStatus = ({ id, i, type }) => {
+const NumberInputWithStatus = ({ id, i, type,}) => {
   const max = 3;
   const min = 0;
   const [validated, setValidated] = React.useState(ValidatedOptions.success);

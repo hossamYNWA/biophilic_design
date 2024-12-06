@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { actions as attrActions } from "./store/AttributesSlice";
 import { actions as strategiesActions } from "./store/StrategiesSlice";
 import { actions as spacesActions } from "./store/SpacesSlice";
+import {actions as occuActions} from "./store/Occupational"
 // f6c899
 const occuData = [
   {
@@ -433,6 +434,7 @@ const Tree = () => {
   });
   dispatch(strategiesActions.resetStrategies())
   dispatch(attrActions.resetAttributes());
+  dispatch(occuActions.resetOCu)
   return (
     <div className={classes.container}>
       <h2>{title}</h2>

@@ -146,13 +146,13 @@ const initial = [
       {
         name: "Create landscapes such as grasslands, prairies, and other habitats.",
         score: 0,
+        opt:true,
         optional: true,
       },
       {
         name: "Design landscapes in courtyards, atria, green roofs, etc.",
         score: 0,
         optional: true,
-        opt: true,
       },
     ],
   },
