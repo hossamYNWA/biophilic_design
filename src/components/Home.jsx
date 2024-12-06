@@ -31,7 +31,7 @@ const Home = () => {
       <div className={classes.title}>
         <h1>restoration <span style={{ color: "var(--pf-t--color--orange--30" }}>evaluator</span> application</h1>
         <h3 style={{ color: "var(--pf-t--color--orange--10" }}>
-          for improving psychological restoration in workspaces
+          for improving psychological restoration in workplaces
         </h3>
         <h5>
           designed by:{" "}

@@ -23,13 +23,11 @@ const occupationalSlice = createSlice({
     name: "occupational",
     initialState:initialState,
     reducers: {
-        addOneScore,resetOCu
+        addOneScore,
     },
 });
 
-function resetOCu(state, action) {
-  state = initialState
-}
+
 function addOneScore(state, action) {
   const { id, type } = action.payload;
   const idx = state.findIndex((item) => item.id === id);
