@@ -124,11 +124,13 @@ const DATA = [
   {
     color: "var(--pf-t--color--gray--20)",
     last: false,
+    bold: true,
     name: "Biophilic design attributes",
     value: [
       {
         color: "var(--pf-t--color--yellow--30)",
         name: "Attributes that permit restoration",
+        bold: true,
         value: [
           { color:'var(--pf-t--color--yellow--20', last: true, id: "b1", name: "B01- Access", score: 0 },
           { color:'var(--pf-t--color--yellow--20', last: true, id: "b2", name: "B02- Prospect and refuge", score: 0 },
@@ -144,10 +146,12 @@ const DATA = [
       },
       { color:'var(--pf-t--color--green--40',
         name: "Attributes that promote restoration",
+        bold: true,
         value: [
           {
             color:'var(--pf-t--color--green--30',
             name: "Direct Natural Attributes",
+            bold: true,
             value: [
               {
                 color:'var(--pf-t--color--green--20',
@@ -197,6 +201,7 @@ const DATA = [
           {
             color:'var(--pf-t--color--green--30',
             name: "Indirect Natural Attributes",
+            bold: true,
             value: [
               {
                 color:'var(--pf-t--color--green--20',
@@ -232,6 +237,7 @@ const DATA = [
           {
             color:'var(--pf-t--color--green--30',
             name: "Space and Place Attributes",
+            bold: true,
             value: [
               {
                 color:'var(--pf-t--color--green--20',
@@ -287,11 +293,13 @@ const DATA = [
     color: "var(--pf-t--color--gray--20)",
     last: false,
     name: "Characteristics for wellbeing in workspaces",
+    bold: true,
     value: [
       {
         color: "var(--pf-t--color--blue--40)",
         last: false,
         name: "Functional and physical wellbeing",
+        bold: true,
         value: [
           {
             color:'var(--pf-t--color--blue--20',
@@ -341,6 +349,7 @@ const DATA = [
         color:'var(--pf-t--color--red--30',
         last: false,
         name: "Social wellbeing",
+        bold: true,
         value: [
           {
             color:'var(--pf-t--color--red--20',

@@ -34,6 +34,7 @@ const AddScore = ({ id, type }) => {
             id={id}
             i={i}
           />
+          {score.opt && <p className={classes.or}>or</p>}
         </div>
       );
     });

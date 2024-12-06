@@ -6,9 +6,10 @@
   border: 1px solid grey;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   transition: all ease-in-out 200ms;
   text-transform: capitalize;
+  padding:10px
 }
 .smlBtn:hover {
   transform: scale(0.97);

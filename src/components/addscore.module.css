@@ -7,9 +7,26 @@
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
+  position: relative
 }
 
 .container span {
   font-size: 0.8rem;
   color:rgb(48, 74, 13)
+}
+
+.or {
+    position: absolute;
+    bottom: -15px;
+    width: 27px;
+    text-align: center;
+    background-color: #324d12c2;
+    height: 27px;
+    border-radius: 50%;
+    color: #f7f6f2;
+    font-weight: bold;
+    line-height: 26px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 15px;
 }
