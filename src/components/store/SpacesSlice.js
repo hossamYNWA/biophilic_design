@@ -44,7 +44,7 @@ function updateSpace(state, action) {
 
 // reset spaces 
 function resetSpaces(state) {
-    state = initial
+    return initial
 }
 const spacesSlice = createSlice({
   name: "spaces",

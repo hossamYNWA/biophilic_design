@@ -147,12 +147,13 @@ const initial = [
         name: "Create landscapes such as grasslands, prairies, and other habitats.",
         score: 0,
         optional: true,
+        opt: true,
       },
       {
         name: "Design landscapes in courtyards, atria, green roofs, etc.",
         score: 0,
         optional: true,
-        opt: true,
+        
       },
     ],
   },
@@ -586,7 +587,7 @@ function updateStrategy(state, action) {
 }
 
 // reset all
-const resetStrategies = (state) => (state = initial);
+const resetStrategies = (state) => initial;
 
 const strategiesSlice = createSlice({
   name: "strategies",

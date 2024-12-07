@@ -1,5 +1,5 @@
 import BigButton from "./BigButton";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate,useLocation } from "react-router-dom";
 import classes from "./tree.module.css";
 import CalculateScore from "./CalculateScore";
 import Occupational from "./Occupational";
@@ -7,6 +7,8 @@ import { useDispatch } from "react-redux";
 import { actions as attrActions } from "./store/AttributesSlice";
 import { actions as strategiesActions } from "./store/StrategiesSlice";
 import { actions as spacesActions } from "./store/SpacesSlice";
+import {actions as occu_actions} from "./store/Occupational";
+import { useEffect } from "react";
 // f6c899
 const occuData = [
   {
@@ -420,6 +422,18 @@ const titles = [{
 
 
 const Tree = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  useEffect(() => {
+    console.log('location: ', location.pathname)
+    if (location.pathname.startsWith(`/tree/`)) {
+      dispatch(strategiesActions.resetStrategies())
+      dispatch(attrActions.resetAttributes());
+      dispatch(occu_actions.resetOccupational())
+    }
+}, [location]);
+
+
   const dispatch = useDispatch();
   const { id } = useParams();
   console.log(id);
@@ -431,8 +445,7 @@ const Tree = () => {
       <BigButton keyName={category.name} configs={category.value} execlude={execlude} color={category.color} key={i} />
     );
   });
-  dispatch(strategiesActions.resetStrategies())
-  dispatch(attrActions.resetAttributes());
+
   return (
     <div className={classes.container}>
       <h2>{title}</h2>

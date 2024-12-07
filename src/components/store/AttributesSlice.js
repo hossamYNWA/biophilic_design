@@ -236,7 +236,7 @@ function getOneScore(score, multiplier, totalWeight) {
 
   // reset attributes
   function resetAttributes(state) {
-    state = initial
+    return initial
   }
 export default attributesSlice.reducer
  const actions = attributesSlice.actions

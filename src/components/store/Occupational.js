@@ -23,7 +23,7 @@ const occupationalSlice = createSlice({
     name: "occupational",
     initialState:initialState,
     reducers: {
-        addOneScore,
+        addOneScore,resetOccupational
     },
 });
 
@@ -31,13 +31,19 @@ const occupationalSlice = createSlice({
 function addOneScore(state, action) {
   const { id, type } = action.payload;
   const idx = state.findIndex((item) => item.id === id);
+  console.log('before editing: ', state[idx].score)
   if (idx !== -1 && type === "inc") {
     state[idx].score += 1;
   }
   if (idx !== -1 && type === "dec") {
     state[idx].score -=1;
   }
+  console.log('after editing: ', state[idx].score)
 }
 
+function resetOccupational(state) {
+  return initialState;
+  console.log('reset runs and state is: ' , state)
+}
 export const actions = occupationalSlice.actions;
 export default occupationalSlice.reducer;

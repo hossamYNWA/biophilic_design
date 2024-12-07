@@ -1,6 +1,7 @@
 import BarChart from "./BarChart";
 import { useSelector } from "react-redux";
 const OccuCharts = () => {
+    
     const allData = useSelector((store) => store.occupational)
     // console.log(allData)
     const dataToUse = [{
