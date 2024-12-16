@@ -8,7 +8,9 @@ import { actions as attrActions } from "./store/AttributesSlice";
 import { actions as strategiesActions } from "./store/StrategiesSlice";
 import { actions as spacesActions } from "./store/SpacesSlice";
 import {actions as occu_actions} from "./store/Occupational";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ModalWithDropdown from "./Modal";
+import SatisfactionIndicator from "./Reference";
 // f6c899
 const occuData = [
   {
@@ -422,7 +424,9 @@ const titles = [{
 
 
 const Tree = () => {
-  const navigate = useNavigate();
+  const [userData, setUserData] = useState({role:null, purpose:null});
+  const [showUserBar, setShowUserBar] = useState(false);
+  // const navigate = useNavigate();
   const location = useLocation();
   useEffect(() => {
     console.log('location: ', location.pathname)
@@ -445,10 +449,17 @@ const Tree = () => {
       <BigButton keyName={category.name} configs={category.value} execlude={execlude} color={category.color} key={i} />
     );
   });
-
+  const modalHandler = (role, purpose) => {
+    setUserData({role:role, purpose:purpose});
+    setShowUserBar(true);
+  }
   return (
     <div className={classes.container}>
+      <ModalWithDropdown passUserData={modalHandler}/>
+      <SatisfactionIndicator/>
+      {showUserBar && <div className={classes.user}>{userData.role} - {userData.purpose}</div>}
       <h2>{title}</h2>
+      <h4 className={classes.ocu_title}>Occupational Attributes</h4>
       <Occupational data={occuData}/>
       {bigContent}
       <CalculateScore />

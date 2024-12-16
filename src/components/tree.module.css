@@ -13,3 +13,24 @@
     margin: 10px;
     font-weight: bold;
 }
+
+.ocu_title
+{
+    text-align: center;
+    font-size: 1.5rem;
+    color:#d98556;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.user{
+        background-color: white;
+        position: relative;
+        top: 0;
+        width: 100vw;
+        text-align: right;
+        padding: 5px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #103d7e;
+}
