@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f11ea822.css",
+    "main.js": "/static/js/main.6bf605e5.js",
+    "static/media/bg2.jpeg": "/static/media/bg2.03ab2caaa7516d734d15.jpeg",
+    "static/media/logo2-nobg.png": "/static/media/logo2-nobg.ab6bef887e2232e56ec4.png",
+    "static/media/RedHatDisplayVF-Italic.woff2": "/static/media/RedHatDisplayVF-Italic.813182e673c38ef5ee4b.woff2",
+    "static/media/RedHatTextVF-Italic.woff2": "/static/media/RedHatTextVF-Italic.078865af129336cde269.woff2",
+    "static/media/RedHatDisplayVF.woff2": "/static/media/RedHatDisplayVF.18ca482120faaa701d8b.woff2",
+    "static/media/RedHatTextVF.woff2": "/static/media/RedHatTextVF.c33624692c8b41e36780.woff2",
+    "static/media/RedHatMonoVF-Italic.woff2": "/static/media/RedHatMonoVF-Italic.6e3027616d8de472723c.woff2",
+    "static/media/RedHatMonoVF.woff2": "/static/media/RedHatMonoVF.e4faf134e53e0f37296b.woff2",
+    "static/media/pf-v6-pficon.woff2": "/static/media/pf-v6-pficon.463d4ddeac4dae277fc4.woff2",
+    "index.html": "/index.html",
+    "main.f11ea822.css.map": "/static/css/main.f11ea822.css.map",
+    "main.6bf605e5.js.map": "/static/js/main.6bf605e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f11ea822.css",
+    "static/js/main.6bf605e5.js"
+  ]
+}
